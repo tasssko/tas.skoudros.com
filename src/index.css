@@ -34,6 +34,7 @@
   .button-quiet { @apply border border-ink/25 hover:border-ink; }
   .expertise-item { @apply min-h-52 border-b border-paper/20 py-7 sm:border-b-0 sm:border-r sm:px-7 first:pl-0 last:border-r-0 last:pr-0; }
   .situation-row { @apply grid gap-5 border-b border-ink/20 py-8 md:grid-cols-[80px_1fr_0.8fr] md:gap-10 md:py-10; }
+  .portfolio-card { @apply rounded-sm border border-paper/20 bg-paper/5 p-6 sm:p-8; }
   .footer-link { @apply inline-flex items-center gap-2 transition-colors hover:text-coral; }
 }
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { ArrowDown, ArrowRight, Check, Contact, ExternalLink, Mail } from 'lucide-react'
-import { reviewIncludes, site, situations, supportAreas } from './data/content'
+import { portfolioBusinesses, reviewIncludes, site, situations, supportAreas } from './data/content'
 
 const externalProps = { target: '_blank', rel: 'noreferrer' }
 const consentKey = 'tas_analytics_consent'
@@ -33,6 +33,7 @@ function App() {
           </a>
           <nav className="hidden items-center gap-8 text-sm font-medium md:flex" aria-label="Main navigation">
             <a className="nav-link" href="#work">How I help</a>
+            <a className="nav-link" href="#portfolio">Portfolio</a>
             <a className="nav-link" href="#review">Clarity review</a>
             <a className="nav-link" href="#about">About</a>
             <a className="nav-link" href={site.links.substack} {...externalProps}>Writing</a>
@@ -134,6 +135,30 @@ function App() {
               <ul className="mt-9 border-t border-ink/20">
                 {supportAreas.map((item) => <li className="flex gap-3 border-b border-ink/15 py-4" key={item}><ArrowRight className="mt-0.5 shrink-0 text-coral" size={18} />{item}</li>)}
               </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="portfolio" className="section-pad bg-ink text-paper">
+          <div className="page-shell">
+            <div className="section-heading">
+              <p className="eyebrow text-paper/55">Portfolio</p>
+              <h2 className="font-display text-4xl leading-tight sm:text-6xl">Businesses I build and support.</h2>
+            </div>
+            <div className="mt-14 grid gap-5 lg:grid-cols-2">
+              {portfolioBusinesses.map((business) => (
+                <article className="portfolio-card" key={business.name}>
+                  <p className="font-mono text-xs uppercase tracking-[0.14em] text-coral">{business.role}</p>
+                  <h3 className="mt-4 font-display text-3xl leading-tight">{business.name}</h3>
+                  <p className="mt-5 max-w-xl leading-7 text-paper/80">{business.summary}</p>
+                  <p className="mt-5 text-sm text-paper/65">{business.focus}</p>
+                  {business.link ? (
+                    <a className="mt-7 inline-flex items-center gap-2 font-semibold text-sun hover:text-paper" href={business.link} {...externalProps}>
+                      Visit business <ExternalLink size={16} />
+                    </a>
+                  ) : null}
+                </article>
+              ))}
             </div>
           </div>
         </section>

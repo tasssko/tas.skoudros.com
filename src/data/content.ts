@@ -3,7 +3,7 @@ export const site = {
   role: 'Fractional CTO',
   description:
     'I help founders and leadership teams make better decisions about software, cloud, security, and engineering delivery, without hiring a full-time CTO.',
-  location: 'UK · Working Internationally',
+  location: 'Operating regions: US, UK, EU, APAC',
   email: 'hello@tas.skoudros.com',
   links: {
     book: 'https://calendar.app.google/pYXAUB9v4kSEJ2Aj7',
@@ -44,4 +44,23 @@ export const supportAreas = [
   'Architecture and platform decisions',
   'Security, resilience, and operational risk',
   'Hiring, vendors, and technical due diligence',
+]
+
+export const portfolioBusinesses = [
+  {
+    name: 'StackTrack Inc',
+    role: 'Founder & Technical Advisor',
+    summary:
+      'A professional services business helping leadership teams improve engineering delivery, platform maturity, and technical governance.',
+    focus: 'Professional services · Platform engineering · Technical advisory · Delivery visibility',
+    link: 'https://stacktrack.com',
+  },
+  {
+    name: 'Servana Managed Services Ltd (trading as StackTrack UK)',
+    role: 'Director',
+    summary:
+      'The operating company behind StackTrack UK, delivering managed services, cloud operations support, and accountable technical delivery.',
+    focus: 'Managed services · Cloud operations · Security controls · Operational reliability',
+    link: 'https://stacktrack.com',
+  },
 ]
