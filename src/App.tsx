@@ -39,7 +39,7 @@ function App() {
             <a className="nav-link" href={site.links.substack} {...externalProps}>Writing</a>
           </nav>
           <a className="button button-small button-dark" href={site.links.book} {...externalProps}>
-            Book a call <ArrowRight size={16} aria-hidden="true" />
+            Book a CTO clarity call <ArrowRight size={16} aria-hidden="true" />
           </a>
         </div>
       </header>
@@ -57,7 +57,7 @@ function App() {
             <div className="lg:pb-2">
               <p className="text-lg leading-8 text-muted">{site.description}</p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <a className="button button-primary" href={site.links.book} {...externalProps}>Book a call <ArrowRight size={18} /></a>
+                <a className="button button-primary" href={site.links.book} {...externalProps}>Book a CTO clarity call <ArrowRight size={18} /></a>
                 <a className="button button-quiet" href={site.links.substack} {...externalProps}>Read my notes <ExternalLink size={17} /></a>
               </div>
             </div>
@@ -65,6 +65,24 @@ function App() {
               <span className="flex size-9 items-center justify-center rounded-full border border-ink/25"><ArrowDown size={16} /></span>Explore
             </a>
             <p className="text-sm text-muted lg:justify-self-end">{site.location}</p>
+          </div>
+        </section>
+
+        <section className="section-pad">
+          <div className="page-shell">
+            <div className="section-heading">
+              <p className="eyebrow">Common situations</p>
+              <h2 className="font-display text-4xl leading-tight sm:text-6xl">You do not need more noise. You need the next useful move.</h2>
+            </div>
+            <div className="mt-14 border-t border-ink/20">
+              {situations.map((situation) => (
+                <article className="situation-row" key={situation.number}>
+                  <span className="font-mono text-xs text-coral">{situation.number}</span>
+                  <h3 className="font-display text-2xl leading-snug sm:text-3xl">{situation.title}</h3>
+                  <p className="max-w-md leading-7 text-muted">{situation.description}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -80,42 +98,6 @@ function App() {
                   <span className="mb-12 block font-mono text-xs text-coral">0{index + 1}</span>
                   <p className="text-lg font-medium">{item}</p>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="section-pad">
-          <div className="page-shell">
-            <div className="section-heading">
-              <p className="eyebrow">Common situations</p>
-              <h2 className="font-display text-4xl leading-tight sm:text-6xl">You do not need more noise. You need a useful next move.</h2>
-            </div>
-            <div className="mt-14 border-t border-ink/20">
-              {situations.map((situation) => (
-                <article className="situation-row" key={situation.number}>
-                  <span className="font-mono text-xs text-coral">{situation.number}</span>
-                  <h3 className="font-display text-2xl leading-snug sm:text-3xl">{situation.title}</h3>
-                  <p className="max-w-md leading-7 text-muted">{situation.description}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="section-pad bg-paper">
-          <div className="page-shell">
-            <div className="section-heading">
-              <p className="eyebrow">Career highlights</p>
-              <h2 className="font-display text-4xl leading-tight sm:text-6xl">A track record across some of the world's most demanding technology programmes.</h2>
-            </div>
-            <div className="mt-14 border-t border-ink/20">
-              {careerHighlights.map((highlight) => (
-                <article className="situation-row" key={highlight.number}>
-                  <span className="font-mono text-xs text-coral">{highlight.number}</span>
-                  <h3 className="font-display text-2xl leading-snug sm:text-3xl">{highlight.title}</h3>
-                  <p className="max-w-md leading-7 text-muted">{highlight.description}</p>
-                </article>
               ))}
             </div>
           </div>
@@ -137,7 +119,25 @@ function App() {
                   </li>
                 ))}
               </ul>
-              <a className="button bg-sun text-ink hover:bg-paper" href={site.links.book} {...externalProps}>Discuss a clarity review <ArrowRight size={18} /></a>
+              <a className="button bg-sun text-ink hover:bg-paper" href={site.links.book} {...externalProps}>Book a CTO clarity call <ArrowRight size={18} /></a>
+            </div>
+          </div>
+        </section>
+
+        <section className="section-pad bg-paper">
+          <div className="page-shell">
+            <div className="section-heading">
+              <p className="eyebrow">Career highlights</p>
+              <h2 className="font-display text-4xl leading-tight sm:text-6xl">A track record across demanding technology programmes.</h2>
+            </div>
+            <div className="mt-14 border-t border-ink/20">
+              {careerHighlights.map((highlight) => (
+                <article className="situation-row" key={highlight.number}>
+                  <span className="font-mono text-xs text-coral">{highlight.number}</span>
+                  <h3 className="font-display text-2xl leading-snug sm:text-3xl">{highlight.title}</h3>
+                  <p className="max-w-md leading-7 text-muted">{highlight.description}</p>
+                </article>
+              ))}
             </div>
           </div>
         </section>
@@ -161,7 +161,8 @@ function App() {
           <div className="page-shell">
             <div className="section-heading">
               <p className="eyebrow text-paper/55">Portfolio</p>
-              <h2 className="font-display text-4xl leading-tight sm:text-6xl">Businesses I build and support.</h2>
+              <h2 className="font-display text-4xl leading-tight sm:text-6xl">My operating companies.</h2>
+              <p className="mt-5 max-w-3xl text-lg leading-8 text-paper/75">Fractional CTO work is led personally by me. Where implementation support is needed, I can bring delivery capability through StackTrack and Servana.</p>
             </div>
             <div className="mt-14 grid gap-5 lg:grid-cols-2">
               {portfolioBusinesses.map((business) => (
@@ -240,7 +241,7 @@ function App() {
             <p className="eyebrow mb-8">Start a conversation</p>
             <div className="grid items-end gap-10 lg:grid-cols-[1fr_auto]">
               <h2 className="max-w-5xl font-display text-5xl leading-[0.98] sm:text-7xl lg:text-8xl">Let’s make the next technical decision a good one.</h2>
-              <a className="button button-dark shrink-0" href={site.links.book} {...externalProps}>Book a call <ArrowRight size={18} /></a>
+              <a className="button button-dark shrink-0" href={site.links.book} {...externalProps}>Book a CTO clarity call <ArrowRight size={18} /></a>
             </div>
           </div>
         </section>

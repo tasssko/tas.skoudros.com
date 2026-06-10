@@ -2,7 +2,7 @@ export const site = {
   name: 'Tas Skoudros',
   role: 'Fractional CTO & Technology Transformation Leader',
   description:
-    '20+ years delivering digital, data, and platform transformation across retail, luxury, financial services, cyber security, and SaaS. I help founders and leadership teams turn complex technology programmes into clear, commercially grounded plans — without hiring a full-time CTO.',
+    'I help founders and leadership teams make high-stakes technology decisions with clarity. From platform strategy and delivery improvement to ai, cloud, security, data, and engineering leadership, I turn complex technology programmes into commercially grounded plans — without the overhead of a full-time CTO.',
   location: 'Operating regions: US, UK, EU, APAC',
   links: {
     book: 'https://calendar.app.google/pYXAUB9v4kSEJ2Aj7',
@@ -52,31 +52,31 @@ export const careerHighlights = [
     number: '01',
     title: 'Waitrose.com replatform',
     description:
-      'Led the replatform of Waitrose.com from legacy IBM WCS to a modern serverless cloud platform, enabling faster delivery, experimentation, and operational scalability — and supporting record online sales.',
+      'Led the replatform of Waitrose.com from legacy IBM WCS to a modern serverless cloud platform, supporting faster delivery, experimentation, operational scale, and record online sales.',
   },
   {
     number: '02',
     title: 'Markel International — Azure Kubernetes migration',
     description:
-      'Led migration from on-premise Rancher-based Kubernetes to Azure Kubernetes Service, improving deployment automation, security posture, cost visibility, and ROI tracking.',
+      'Led the migration from on-premise Rancher-based Kubernetes to Azure Kubernetes Service, improving automation, security posture, cost visibility, and ROI tracking.',
   },
   {
     number: '03',
     title: 'Net-a-Porter — high-scale digital commerce',
     description:
-      'Delivered platforms supporting £8M/day and £650k/hour trading volumes. Consistently delivered against aggressive commercial timelines for one of the world\'s most demanding digital luxury brands.',
+      'Delivered platforms supporting £8M/day and £650k/hour trading volumes, meeting aggressive commercial timelines for one of the world\'s most demanding luxury commerce businesses.',
   },
   {
     number: '04',
     title: 'LVMH, Tag Heuer, Celine, Sephora, Benefit',
     description:
-      'Designed and delivered digital platforms and SaaS-style offerings — including chatbots, clienteling tools, and cyber security platforms — across multiple luxury and beauty brands.',
+      'Designed and delivered digital platforms and SaaS-style offerings across luxury and beauty brands, including chatbots, clienteling tools, and cyber security platforms.',
   },
   {
     number: '05',
     title: 'StackTrack — founded and scaled',
     description:
-      'Founded and scaled StackTrack to £2.5M revenue, delivering modern platforms, tooling, and technology advisory to 50+ organisations across multiple sectors.',
+      'Founded and scaled StackTrack to £2.5M revenue, supporting 50+ organisations with modern platforms, tooling, advisory, and delivery services.',
   },
 ]
 
