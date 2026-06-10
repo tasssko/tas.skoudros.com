@@ -1,0 +1,12 @@
+[build]
+  publish = "out"
+
+[build.environment]
+   NETLIFY_NEXT_PLUGIN_SKIP = "true"
+   CI = "true"
+
+[[redirects]]
+  from = "https://skoudros.com/*"
+  to = "https://tas.skoudros.com/:splat"
+  status = 301
+  force = true
