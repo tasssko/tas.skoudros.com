@@ -7,7 +7,7 @@ export const site = {
   email: 'hello@tas.skoudros.com',
   links: {
     book: 'https://calendar.app.google/pYXAUB9v4kSEJ2Aj7',
-    linkedin: 'https://www.linkedin.com/in/tasssko/',
+    linkedin: 'https://www.linkedin.com/in/tassko/',
     substack: 'https://notes.skoudros.com',
   },
   expertise: ['Technology Strategy', 'Cloud & DevOps & AI', 'Security & Risk', 'Engineering Leadership'],
