@@ -6,7 +6,7 @@ export const site = {
   location: 'UK · Working Internationally',
   email: 'hello@tas.skoudros.com',
   links: {
-    book: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1QrmBWGEKOzhh-aIWdgjHfbo1L4BLnPRokDgTrKZxHabIAnUbwZ90bfSUxyy-uy9bFJBJS_pVV',
+    book: 'https://calendar.app.google/pYXAUB9v4kSEJ2Aj7',
     linkedin: 'https://www.linkedin.com/in/tasssko/',
     substack: 'https://notes.skoudros.com',
   },
