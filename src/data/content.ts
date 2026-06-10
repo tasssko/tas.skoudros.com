@@ -76,7 +76,7 @@ export const careerHighlights = [
     number: '05',
     title: 'StackTrack — founded and scaled',
     description:
-      'Founded and scaled StackTrack to £2.5M revenue, supporting 50+ organisations with modern platforms, tooling, advisory, and delivery services.',
+      'Founded and scaled StackTrack supporting 50+ organisations with modern platforms, tooling, advisory, and delivery services.',
   },
 ]
 
