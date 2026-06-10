@@ -4,7 +4,6 @@ export const site = {
   description:
     '20+ years delivering digital, data, and platform transformation across retail, luxury, financial services, cyber security, and SaaS. I help founders and leadership teams turn complex technology programmes into clear, commercially grounded plans — without hiring a full-time CTO.',
   location: 'Operating regions: US, UK, EU, APAC',
-  email: 'tas@skoudros.com',
   links: {
     book: 'https://calendar.app.google/pYXAUB9v4kSEJ2Aj7',
     linkedin: 'https://www.linkedin.com/in/tassko/',

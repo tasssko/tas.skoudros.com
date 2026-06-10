@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { ArrowDown, ArrowRight, Check, Contact, ExternalLink, Mail } from 'lucide-react'
+import { ArrowDown, ArrowRight, Check, Contact, ExternalLink } from 'lucide-react'
 import { careerHighlights, portfolioBusinesses, reviewIncludes, site, situations, supportAreas } from './data/content'
 
 const externalProps = { target: '_blank', rel: 'noreferrer' }
@@ -250,7 +250,6 @@ function App() {
         <div className="page-shell flex flex-col gap-6 text-sm sm:flex-row sm:items-center sm:justify-between">
           <p className="font-display text-xl">{site.name}<span className="text-coral">.</span></p>
           <div className="flex flex-wrap gap-6 text-paper/65">
-            <a className="footer-link" href={`mailto:${site.email}`}><Mail size={15} /> Email</a>
             <a className="footer-link" href={site.links.linkedin} {...externalProps}><Contact size={15} /> LinkedIn</a>
             <a className="footer-link" href={site.links.substack} {...externalProps}>Writing</a>
           </div>
