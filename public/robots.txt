@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tas.skoudros.com/sitemap.xml
