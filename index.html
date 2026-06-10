@@ -10,6 +10,51 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tas.skoudros.com" />
     <link rel="canonical" href="https://tas.skoudros.com" />
+    <script>
+      (function setupAnalyticsConsent() {
+        const key = 'tas_analytics_consent';
+        const measurementId = 'G-9FKS12QSXN';
+        const isLocalhost =
+          window.location.hostname === 'localhost' ||
+          window.location.hostname === '127.0.0.1' ||
+          window.location.hostname === '::1';
+
+        let analyticsLoaded = false;
+
+        function loadAnalytics() {
+          if (analyticsLoaded || isLocalhost) {
+            return;
+          }
+
+          analyticsLoaded = true;
+
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            window.dataLayer.push(arguments);
+          }
+
+          gtag('js', new Date());
+          gtag('config', measurementId);
+        }
+
+        window.__setAnalyticsConsent = function setAnalyticsConsent(consent) {
+          window.localStorage.setItem(key, consent);
+
+          if (consent === 'granted') {
+            loadAnalytics();
+          }
+        };
+
+        if (window.localStorage.getItem(key) === 'granted') {
+          loadAnalytics();
+        }
+      })();
+    </script>
     <title>Tas Skoudros · Fractional CTO</title>
   </head>
   <body>

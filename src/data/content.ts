@@ -3,14 +3,14 @@ export const site = {
   role: 'Fractional CTO',
   description:
     'I help founders and leadership teams make better decisions about software, cloud, security, and engineering delivery, without hiring a full-time CTO.',
-  location: 'UK · Working internationally',
+  location: 'UK · Working Internationally',
   email: 'hello@tas.skoudros.com',
   links: {
-    book: 'https://book.skoudros.com',
-    linkedin: 'https://www.linkedin.com/in/tassskoudros/',
+    book: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1QrmBWGEKOzhh-aIWdgjHfbo1L4BLnPRokDgTrKZxHabIAnUbwZ90bfSUxyy-uy9bFJBJS_pVV',
+    linkedin: 'https://www.linkedin.com/in/tasssko/',
     substack: 'https://notes.skoudros.com',
   },
-  expertise: ['Technology strategy', 'Cloud & DevOps', 'Security & risk', 'Engineering leadership'],
+  expertise: ['Technology Strategy', 'Cloud & DevOps & AI', 'Security & Risk', 'Engineering Leadership'],
 }
 
 export const situations = [

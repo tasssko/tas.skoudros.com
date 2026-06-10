@@ -1,9 +1,29 @@
+import { useEffect, useState } from 'react'
 import { ArrowDown, ArrowRight, Check, Contact, ExternalLink, Mail } from 'lucide-react'
 import { reviewIncludes, site, situations, supportAreas } from './data/content'
 
 const externalProps = { target: '_blank', rel: 'noreferrer' }
+const consentKey = 'tas_analytics_consent'
+
+type ConsentValue = 'granted' | 'denied'
+
+type AnalyticsWindow = Window & {
+  __setAnalyticsConsent?: (consent: ConsentValue) => void
+}
 
 function App() {
+  const [showConsentBanner, setShowConsentBanner] = useState(false)
+
+  useEffect(() => {
+    const consentValue = window.localStorage.getItem(consentKey)
+    setShowConsentBanner(consentValue !== 'granted' && consentValue !== 'denied')
+  }, [])
+
+  const handleConsentChoice = (choice: ConsentValue) => {
+    ;(window as AnalyticsWindow).__setAnalyticsConsent?.(choice)
+    setShowConsentBanner(false)
+  }
+
   return (
     <div className="min-h-screen overflow-hidden bg-paper text-ink">
       <header className="absolute inset-x-0 top-0 z-20">
@@ -173,6 +193,36 @@ function App() {
           <p className="text-paper/45">© {new Date().getFullYear()} Tas Skoudros</p>
         </div>
       </footer>
+
+      {showConsentBanner ? (
+        <section
+          className="fixed inset-x-0 bottom-0 z-50 border-t border-paper/15 bg-ink/95 text-paper backdrop-blur"
+          aria-label="Cookie consent"
+        >
+          <div className="page-shell flex flex-col gap-4 py-4 sm:flex-row sm:items-center sm:justify-between">
+            <p className="max-w-3xl text-sm leading-6 text-paper/85">
+              This site uses Google Analytics cookies to understand traffic and improve content.
+              Choose Accept to enable analytics or Decline to continue without tracking.
+            </p>
+            <div className="flex gap-3">
+              <button
+                className="button button-small border border-paper/30 text-paper hover:border-paper"
+                onClick={() => handleConsentChoice('denied')}
+                type="button"
+              >
+                Decline
+              </button>
+              <button
+                className="button button-small bg-coral text-ink hover:bg-sun"
+                onClick={() => handleConsentChoice('granted')}
+                type="button"
+              >
+                Accept
+              </button>
+            </div>
+          </div>
+        </section>
+      ) : null}
     </div>
   )
 }
