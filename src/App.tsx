@@ -205,7 +205,12 @@ function App() {
         <section id="about" className="border-y border-ink/15 bg-white">
           <div className="page-shell grid lg:grid-cols-[0.72fr_1.28fr]">
             <div className="portrait-panel min-h-[420px] lg:min-h-[680px]">
-              <div className="portrait-mark" aria-hidden="true">TS</div>
+              <img
+                src="/tas-skoudros.png"
+                alt="Tas Skoudros"
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
               <p className="absolute bottom-8 left-8 font-mono text-xs uppercase text-paper/65">Technology · People · Delivery</p>
             </div>
             <div className="flex items-center py-16 lg:px-20 lg:py-24">
