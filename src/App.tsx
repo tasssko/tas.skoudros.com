@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { ArrowDown, ArrowRight, Check, Contact, ExternalLink, Mail } from 'lucide-react'
-import { portfolioBusinesses, reviewIncludes, site, situations, supportAreas } from './data/content'
+import { careerHighlights, portfolioBusinesses, reviewIncludes, site, situations, supportAreas } from './data/content'
 
 const externalProps = { target: '_blank', rel: 'noreferrer' }
 const consentKey = 'tas_analytics_consent'
@@ -103,6 +103,24 @@ function App() {
           </div>
         </section>
 
+        <section className="section-pad bg-paper">
+          <div className="page-shell">
+            <div className="section-heading">
+              <p className="eyebrow">Career highlights</p>
+              <h2 className="font-display text-4xl leading-tight sm:text-6xl">A track record across some of the world's most demanding technology programmes.</h2>
+            </div>
+            <div className="mt-14 border-t border-ink/20">
+              {careerHighlights.map((highlight) => (
+                <article className="situation-row" key={highlight.number}>
+                  <span className="font-mono text-xs text-coral">{highlight.number}</span>
+                  <h3 className="font-display text-2xl leading-snug sm:text-3xl">{highlight.title}</h3>
+                  <p className="max-w-md leading-7 text-muted">{highlight.description}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id="review" className="section-pad bg-moss text-paper">
           <div className="page-shell grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
             <div>
@@ -149,9 +167,29 @@ function App() {
               {portfolioBusinesses.map((business) => (
                 <article className="portfolio-card" key={business.name}>
                   <p className="font-mono text-xs uppercase tracking-[0.14em] text-coral">{business.role}</p>
-                  <h3 className="mt-4 font-display text-3xl leading-tight">{business.name}</h3>
+                  <h3 className="text-xl font-semibold text-neutral-50">
+                    {business.name}
+                  </h3>
+
+                  {business.tradingAs && (
+                    <p className="mt-1 text-sm text-neutral-300">
+                      Trading as {business.tradingAs}
+                    </p>
+                  )}
+                  <p className="mt-1 text-sm font-medium text-neutral-300">
+                    {business.role}
+                  </p>
                   <p className="mt-5 max-w-xl leading-7 text-paper/80">{business.summary}</p>
-                  <p className="mt-5 text-sm text-paper/65">{business.focus}</p>
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {business.keywords.map((keyword) => (
+                      <span
+                        key={keyword}
+                        className="rounded-full border border-neutral-300 px-3 py-1 text-sm font-medium text-neutral-400"
+                      >
+                        {keyword}
+                      </span>
+                    ))}
+                  </div>
                   {business.link ? (
                     <a className="mt-7 inline-flex items-center gap-2 font-semibold text-sun hover:text-paper" href={business.link} {...externalProps}>
                       Visit business <ExternalLink size={16} />
@@ -174,8 +212,9 @@ function App() {
                 <p className="eyebrow mb-8">About Tas</p>
                 <h2 className="font-display text-4xl leading-tight sm:text-6xl">Technology should create leverage, not anxiety.</h2>
                 <div className="mt-9 space-y-5 text-lg leading-8 text-muted">
-                  <p>I work with ambitious founders and leadership teams who need experienced technical judgment, but not another layer of management.</p>
-                  <p>My approach is practical and direct. I connect technology decisions to business outcomes, make risk visible, and help teams build the confidence and operating rhythm to deliver.</p>
+                  <p>Senior technology leader with 20+ years delivering digital, data, and platform transformation across retail, luxury, financial services, cyber security, and SaaS. Founder of StackTrack, and director of Servana Managed Services.</p>
+                  <p>I'm comfortable operating from board-level strategy through to hands-on technical delivery — partnering with CEOs, commercial, product, and operational leaders to turn complex technology programmes into clear, commercially grounded plans.</p>
+                  <p>Hands-on across TypeScript, Python, Go, Rust, and Ruby. Deep experience in AWS, Azure, Kubernetes, serverless, and integration-heavy environments.</p>
                 </div>
                 <a className="mt-10 inline-flex items-center gap-2 font-semibold underline decoration-coral decoration-2 underline-offset-8" href={site.links.linkedin} {...externalProps}>Connect on LinkedIn <Contact size={18} /></a>
               </div>
